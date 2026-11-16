@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- profile-styled.html -->
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #fff8dc;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+#title {
+    color: #003366;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 18px;
+    margin-bottom: 15px;
+}
+
+.section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border: 2px solid #003366;
+    border-radius: 10px;
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #003366;
+}
+
+b, strong {
+    color: #003366;
+}
+
+.section mark {
+    background-color: #fff8dc;
+    color: #333333;
+    padding: 2px 6px;
+}
+
+label {
+    display: block;
+    margin: 4px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0 20px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:link { color: blue; }
+a:visited { color: purple; }
+a:hover { color: red; }
+a:active { color: orange; }
+
+button {
+    padding: 6px 14px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+button:hover { background-color: lightblue; }
+button:focus { outline: 2px solid blue; }
+button:disabled { background-color: lightgray; cursor: not-allowed; }
+
+input:checked { accent-color: green; }
+input:required { outline: 2px solid orange; }
+input:valid { accent-color: green; }
+input:invalid { accent-color: red; }
+
+section:target {
+    background-color: lightyellow;
+    border: 2px solid orange;
+}
+
+.section > p:first-of-type::first-line {
+    color: blue;
+    font-weight: bold;
+}
+
+/* drop cap only on the introduction */
+#intro p::first-letter {
+    font-size: 30px;
+    color: red;
+}
+
+::selection {
+    background-color: yellow;
+    color: black;
+}
+
+a[download] { color: green; }
+a[download]:hover { color: darkgreen; }
+
+input[type="radio"] { cursor: pointer; }
+
+/* external links */
+a[href^="https"] { background-color: lightyellow; }
+
+/* PDF links */
+a[href$=".pdf"] { font-weight: bold; }
+
+/* YouTube links get YouTube's red */
+a[href*="youtube"] { color: red; }
+a[href*="youtube"]:hover { color: darkred; }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ivan James S. Sargado - Personal Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+    <header>
+        <h1 id="title">Ivan James S. Sargado</h1>
+    </header>
+
+    <nav>
+        <a href="#intro">About Me</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#interests">Interests</a>
+        <a href="#funfact">Fun Fact</a>
+        <a href="#contact">Say Hi</a>
+        <a href="https://www.youtube.com/">Youtube</a>
+    </nav>
+
+    <main>
+        <section class="section" id="intro">
+            <h2>About Me</h2>
+            <p>Hi my name is <b>Ivan</b>, I'm a first year <strong>BS Computer Science</strong> student.</p>
+        </section>
+
+        <section class="section" id="hobbies">
+            <h2>Hobbies</h2>
+            <p>I love to play <em>online games</em> and watch videos on tiktok. I like to explore the <i>Earth's past</i> and know the different species lived in the past.</p>
+        </section>
+
+        <section class="section" id="interests">
+            <h2>Interests</h2>
+            <p>I enjoy eating and tasting different kinds of food. I want to learn about <mark>coding</mark> and also to play a <mark>stringed instrument</mark>.</p>
+        </section>
+
+        <section class="section" id="funfact">
+            <h2>Fun Fact</h2>
+            <p>Fun fact about me is that I sometimes look like I'm not the kind of person you enjoy to be with, but once you get to know me, you'll know how I'm easy to get along with.</p>
+            <p>Want to see what I watch? <a href="https://www.youtube.com/">Youtube</a></p>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Say Hi</h2>
+            <form>
+                <p>What would you like to talk about?</p>
+                <label><input type="radio" name="topic" required> Online games</label>
+                <label><input type="radio" name="topic"> Coding</label>
+                <label><input type="radio" name="topic"> Food</label>
+                <label><input type="radio" name="topic"> Earth's past</label>
+                <p>
+                    <button type="submit">Start a Chat!</button>
+                    <button type="button" disabled>Resume Coming Soon</button>
+                </p>
+            </form>
+            <p><a href="ivan-profile.pdf" download>Download My Profile Sheet</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#top">Back to top</a>
+    </footer>
+
+</body>
+</html>
